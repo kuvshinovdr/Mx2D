@@ -94,7 +94,7 @@ x = \dfrac{m r^2 F_x + \dfrac{J r}{m} M}{J^2 + m^2 r^2}\dfrac{t^2}{2} + \dot{x}_
 Метод средней точки:
 
 ```math
-\left\{\begin{array}{cccccc}
+\left\{\begin{array}{cclccc}
 \dot{q} & = & v & \Rightarrow & q & \approx & w\dfrac{1}{2}h^2 + v_0 h + q_0,\\
 \dot{v} & = & w & \Rightarrow & v & \approx & w h + v_0,\\
 w & = & Q\left(t + \frac{1}{2}h, \frac{1}{2}(q_0 + q), \frac{1}{2}(v_0 + v)\right) + R,\\
@@ -106,5 +106,16 @@ dim A < dim w = dim R => R определяется неоднозначно
 
 ```math
 A(t, q, v) = 0 \Rightarrow\\
-\dot{A} = \dfrac{\partial A}{\partial t}(t, q, v) + \dfrac{\partial A}{\partial q}(t, q, v) v + \dfrac{\partial A}{\partial v}(t, q, v) w.
+\dot{A} = \dfrac{\partial A}{\partial t}(t, q, v) + \dfrac{\partial A}{\partial q}(t, q, v) v + \dfrac{\partial A}{\partial v}(t, q, v) w = 0.
+```
+
+Приходим к недоопределённой системе относительно $w$ и $R$:
+
+```math
+\left\{\begin{array}{ccc}
+t_{1/2} & = & t + \frac{1}{2}h,\\
+v_{1/2} & = & v_0 + \frac{h}{2}w,\\
+q_{1/2} & = & q_0 + \frac{h}{2}v_0 + \dfrac{h^2}{4}w,\\
+w - R & = & Q\left(t_{1/2}, q_{1/2}, v_{1/2})\right),\\
+\dfrac{\partial A}{\partial v}(t_{1/2}, q_{1/2}, v_{1/2}) w = -\dfrac{\partial A}{\partial t}(t_{1/2}, q_{1/2}, v_{1/2}) - \dfrac{\partial A}{\partial q}(t_{1/2}, q_{1/2}, v_{1/2}) v_{1/2}.
 ```
