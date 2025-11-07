@@ -117,6 +117,6 @@ t_{1/2} & = & t + \frac{1}{2}h,\\
 v_{1/2} & = & v_0 + \frac{h}{2}w,\\
 q_{1/2} & = & q_0 + \frac{h}{2}v_0 + \dfrac{h^2}{4}w,\\
 w - R & = & Q\left(t_{1/2}, q_{1/2}, v_{1/2})\right),\\
-\dfrac{\partial A}{\partial v}(t_{1/2}, q_{1/2}, v_{1/2}) w = -\dfrac{\partial A}{\partial t}(t_{1/2}, q_{1/2}, v_{1/2}) - \dfrac{\partial A}{\partial q}(t_{1/2}, q_{1/2}, v_{1/2}) v_{1/2}.
+\dfrac{\partial A}{\partial v}(t_{1/2}, q_{1/2}, v_{1/2}) w & = & -\dfrac{\partial A}{\partial t}(t_{1/2}, q_{1/2}, v_{1/2}) - \dfrac{\partial A}{\partial q}(t_{1/2}, q_{1/2}, v_{1/2}) v_{1/2}.
 \end{array}\right.
 ```
