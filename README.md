@@ -113,10 +113,11 @@ A(t, q, v) = 0 \Rightarrow\\
 
 ```math
 \left\{\begin{array}{ccl}
-t_{1/2} & = & t + \frac{1}{2}h,\\
-v_{1/2} & = & v_0 + \frac{h}{2}w,\\
-q_{1/2} & = & q_0 + \frac{h}{2}v_0 + \dfrac{h^2}{4}w,\\
-w - R & = & Q\left(t_{1/2}, q_{1/2}, v_{1/2}\right),\\
-\dfrac{\partial A}{\partial v}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) w & = & -\dfrac{\partial A}{\partial t}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) - \dfrac{\partial A}{\partial q}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) v_{1/2}.
+t_{0.5} & = & t_0 + \frac{1}{2}h,\\
+v_{0.5} & = & v_0 + \frac{h}{2}w,\\
+q_{0.5} & = & q_0 + \frac{h}{2}v_0 + \dfrac{h^2}{4}w,\\
+w - R & = & Q\left(t_{0.5}, q_{0.5}, v_{0.5}\right),\\
+\dfrac{\partial A}{\partial v}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) w & = 
+& -\dfrac{\partial A}{\partial t}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) - \dfrac{\partial A}{\partial q}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) v_{0.5}.
 \end{array}\right.
 ```
