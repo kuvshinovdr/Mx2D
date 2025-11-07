@@ -70,6 +70,17 @@ R_\varphi & = & \dfrac{m r}{J^2 + m^2 r^2}\left(m r M - J F_x\right),
 \end{array}\right.
 ```
 
+Подставим это решение в уравнение относительно $\ddot{x}$:
+
+```math
+\ddot{x} = \dfrac{1}{J^2 + m^2 r^2}\left(m r^2 F_x + J r M\right),
+```
+
+откуда:
+
+```math
+x = \dfrac{1}{J^2 + m^2 r^2}\left(m r^2 F_x + J r M\right)\dfrac{t^2}{2} + \dot{x}_0 t + x_0.
+```
 
 
 
