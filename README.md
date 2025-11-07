@@ -109,14 +109,14 @@ A(t, q, v) = 0 \Rightarrow\\
 \dot{A} = \dfrac{\partial A}{\partial t}(t, q, v) + \dfrac{\partial A}{\partial q}(t, q, v) v + \dfrac{\partial A}{\partial v}(t, q, v) w = 0.
 ```
 
-Приходим к недоопределённой системе относительно $w$ и $R$:
+Приходим к недоопределённой системе относительно $w$ и $R$ (для метода средней точки):
 
 ```math
-\left\{\begin{array}{ccc}
+\left\{\begin{array}{ccl}
 t_{1/2} & = & t + \frac{1}{2}h,\\
 v_{1/2} & = & v_0 + \frac{h}{2}w,\\
 q_{1/2} & = & q_0 + \frac{h}{2}v_0 + \dfrac{h^2}{4}w,\\
-w - R & = & Q\left(t_{1/2}, q_{1/2}, v_{1/2})\right),\\
-\dfrac{\partial A}{\partial v}(t_{1/2}, q_{1/2}, v_{1/2}) w & = & -\dfrac{\partial A}{\partial t}(t_{1/2}, q_{1/2}, v_{1/2}) - \dfrac{\partial A}{\partial q}(t_{1/2}, q_{1/2}, v_{1/2}) v_{1/2}.
+w - R & = & Q\left(t_{1/2}, q_{1/2}, v_{1/2}\right),\\
+\dfrac{\partial A}{\partial v}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) w & = & -\dfrac{\partial A}{\partial t}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) - \dfrac{\partial A}{\partial q}\left(t_{1/2}, q_{1/2}, v_{1/2}\right) v_{1/2}.
 \end{array}\right.
 ```
