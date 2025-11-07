@@ -22,7 +22,7 @@
 
 Система:
 
-$$
+```math
 \left\{\begin{array}{ccc}
 m\ddot{x} & = & F_x + R_x,\\
 m\ddot{y} & = & F_y + R_y,\\
@@ -30,45 +30,47 @@ J\ddot{\varphi} & = & M + R_\varphi,\\
 y = r,\\
 x = r\varphi.
 \end{array}\right.
-$$
+```
 
 Силы реакций $R_x$, $R_y$, $R_\varphi$ не известны.
 
 Если продифференцировать уравнения связей, получим дополнительные условия на производные:
 
-$$
+```math
 \left\{\begin{array}{ccc}
 \ddot{y} & = & 0,\\
 \ddot{x} & = & r\ddot{\varphi},
 \end{array}\right.
-$$
+```
 
 из первого получим: $R_y = -F_y$.
 Подставив второе в систему, получим:
 
-$$
+```math
 \left\{\begin{array}{ccc}
 m\ddot{x} & = & F_x + R_x,\\
 J\ddot{x} & = & r M + r R_\varphi,
 \end{array}\right.
-$$
+```
 
 т.е. $J(F_x + R_x) = m r(M + R_\varphi)$ или
 
-$$
+```math
 J R_x + m r R_\varphi = m r M - J F_x,
-$$
+```
 
 что пока сохраняет неоднозначность.
 
 Выпишем псевдообращение:
 
-$$
+```math
 \left\{\begin{array}{ccc}
 R_x & = & \dfrac{J}{J^2 + m^2 r^2},\\
 R_\varphi & = & \dfrac{m r}{J^2 + m^2 r^2},
 \end{array}\right.
-$$
+```
+
+
 
 
 
