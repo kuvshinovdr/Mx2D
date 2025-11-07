@@ -79,24 +79,32 @@ R_\varphi & = & \dfrac{m r}{J^2 + m^2 r^2}\left(m r M - J F_x\right),
 откуда:
 
 ```math
-x = \dfrac{m r^2 F_x + \dfrac{J r}{m} r M}{J^2 + m^2 r^2}\dfrac{t^2}{2} + \dot{x}_0 t + x_0.
+x = \dfrac{m r^2 F_x + \dfrac{J r}{m} M}{J^2 + m^2 r^2}\dfrac{t^2}{2} + \dot{x}_0 t + x_0.
 ```
 
+### Обобщение
 
+- q — вектор состояния системы
+- v — вектор скоростей
+- w — вектор ускорений
+- R — вектор неизвестных реакций
+- Q — вектор нормированных сил
+- A — функция связей
 
+Метод средней точки:
 
-q -- вектор состояния системы ("обобщённые переменные")
-v -- вектор скоростей
-w -- вектор ускорений
-R -- вектор неизвестных реакций
-Q -- вектор нормированных сил ("обобщённые силы")
-A -- функция связей
+```math
+\left\{\begin{array}{cccccc}
+\dot{q} & = & v & \Rightarrow & q & \approx & w\dfrac{1}{2}h^2 + v_0 h + q_0,\\
+\dot{v} & = & w & \Rightarrow & v & \approx & w h + v_0,\\
+w & = & Q\left(t + \frac{1}{2}h, \frac{1}{2}(q_0 + q), \frac{1}{2}(v_0 + v)\right) + R,\\
+0 & = & A(t + \frac{1}{2}h, \frac{1}{2}(q_0 + q), \frac{1}{2}(v_0 + v)).
+\end{array}\right.
+```
 
-dq/dt = v ~ q = wh2/2 + v0h + q0
-dv/dt = w ~ v = wh + v0
-w = Q(t + h/2, (q0 + q)/2, (v0 + v)/2) + R
-A(t + h/2, (q0 + q)/2, (v0 + v)/2) = 0
 dim A < dim w = dim R => R определяется неоднозначно
 
-A(t, q, dq/dt) = 0
-dA/dt = дA/дt(t, q, v) + дA/дq(t, q, v) v + дА/дv(t, q, v) w
+```math
+A(t, q, v) = 0 \Rightarrow\\
+\dot{A} = \dfrac{\partial A}{\partial t}(t, q, v) + \dfrac{\partial A}{\partial q}(t, q, v) v + \dfrac{\partial A}{\partial v}(t, q, v) w.
+```
