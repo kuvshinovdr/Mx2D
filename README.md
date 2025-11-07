@@ -27,8 +27,8 @@
 m\ddot{x} & = & F_x + R_x,\\
 m\ddot{y} & = & F_y + R_y,\\
 J\ddot{\varphi} & = & M + R_\varphi,\\
-y = r,\\
-x = r\varphi.
+y & = & r,\\
+x & = & r\varphi.
 \end{array}\right.
 ```
 
@@ -61,12 +61,12 @@ J R_x + m r R_\varphi = m r M - J F_x,
 
 что пока сохраняет неоднозначность.
 
-Выпишем псевдообращение:
+Выпишем минимальное решение через псевдообращение:
 
 ```math
 \left\{\begin{array}{ccc}
-R_x & = & \dfrac{J}{J^2 + m^2 r^2},\\
-R_\varphi & = & \dfrac{m r}{J^2 + m^2 r^2},
+R_x & = & \dfrac{J}{J^2 + m^2 r^2}\left(m r M - J F_x\right),\\
+R_\varphi & = & \dfrac{m r}{J^2 + m^2 r^2}\left(m r M - J F_x\right),
 \end{array}\right.
 ```
 
