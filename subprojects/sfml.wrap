@@ -1,0 +1,5 @@
+[wrap-git]
+directory = sfml
+url = https://github.com/SFML/SFML.git
+revision = master
+method = cmake

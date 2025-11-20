@@ -10,7 +10,8 @@ project('Mx2D', 'cpp',
 
 # Dependencies.
 doctest_dep = dependency('doctest', fallback : ['doctest', 'doctest_dep'])
-deps = [doctest_dep]
+sfml_dep = dependency('sfml', fallback : ['sfml', 'sfml_dep'])
+deps = [doctest_dep, sfml_dep]
 
 # Enforce C++23 support and GCC ≥ 15 for std::println.
 cc = meson.get_compiler('cpp')
