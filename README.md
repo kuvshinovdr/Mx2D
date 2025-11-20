@@ -121,3 +121,14 @@ w - R & = & Q\left(t_{0.5}, q_{0.5}, v_{0.5}\right),\\
 & -\dfrac{\partial A}{\partial t}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) - \dfrac{\partial A}{\partial q}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) v_{0.5}.
 \end{array}\right.
 ```
+
+Если продифференцировать уравнения связей:
+
+```math
+\left\{\begin{array}{rclr}
+\mathbf M \ddot{\mathbf x} & = & \mathbf{F}(t, \mathbf x, \dot{\mathbf x}) + \mathbf{R}, & \mathbf x \in \mathbb R^n, \mathbf R \in \mathbb R^n,\\
+\mathbf A(t, \mathbf x, \dot{\mathbf x}) \ddot{\mathbf x} & = & \mathbf a(t, \mathbf x, \dot{\mathbf x}), & \mathbf A(t, \mathbf x, \dot{\mathbf x}) \in \mathbb R^{s \times n}.
+\end{array}\right.
+```
+
+Поскольку $s < n$, то система с $2n$ уравнений недоопределена.

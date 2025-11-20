@@ -1,5 +1,5 @@
 meson setup build
 meson compile -C build
-.\build\rendercsv --help
+.\build\mx2d --help
 
 meson test -C build -v
