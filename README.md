@@ -25,7 +25,7 @@
 - [DocTest](https://github.com/doctest/doctest), лицензия [MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
 - [SFML](https://github.com/SFML/SFML), лицензия [Zlib](https://github.com/SFML/SFML/blob/master/license.md);
 
-Опосредованно через SFML (то, что пришлось прописать явно для Meson), в алфавитном порядке:
+Опосредованно через SFML (то, что пришлось прописать явно для Meson или Meson добавил сам в subprojects), в алфавитном порядке:
 
 - [FLAC](https://github.com/xiph/flac), несколько лицензий на выбор, в частности, [BSD-3](https://github.com/xiph/flac/blob/master/COPYING.Xiph);
 - [FreeType2](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git), лицензия [FreeType Project](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT);
