@@ -18,6 +18,22 @@
   - Учёт трения скольжения (и момента трения качения — круги?).
   - Удар с коэффициентом восстановления.
 
+### Зависимости
+
+Напрямую:
+
+- [DocTest](https://github.com/doctest/doctest), [лицензия MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
+- [SFML](https://github.com/SFML/SFML), [лицензия Zlib](https://github.com/SFML/SFML/blob/master/license.md);
+
+Опосредованно через SFML (то, что пришлось прописать явно для Meson), в алфавитном порядке:
+
+- [FLAC](https://github.com/xiph/flac), несколько лицензий на выбор, в частности, [BSD-3](https://github.com/xiph/flac/blob/master/COPYING.Xiph);
+- [FreeType2](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git), лицензия [FreeType Project](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT);
+- [libpng](https://github.com/pnggroup/libpng), лицензия [PNG Reference Library License version 2](https://github.com/pnggroup/libpng/blob/libpng18/LICENSE.md);
+- [miniaudio](https://miniaud.io/), лицензия [MIT-0](https://github.com/aws/mit-0);
+- [OGG](https://github.com/xiph/ogg), лицензия [BSD-3](https://github.com/xiph/ogg/blob/main/COPYING);
+- [Vorbis](https://github.com/xiph/vorbis), лицензия [BSD-3](https://github.com/xiph/vorbis/blob/main/COPYING).
+
 
 ## Рассуждения
 

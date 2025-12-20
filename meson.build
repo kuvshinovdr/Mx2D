@@ -9,9 +9,23 @@ project('Mx2D', 'cpp',
 )
 
 # Dependencies.
-doctest_dep = dependency('doctest', fallback : ['doctest', 'doctest_dep'])
-sfml_dep = dependency('sfml', fallback : ['sfml', 'sfml_dep'])
-deps = [doctest_dep, sfml_dep]
+doctest_dep   = dependency('doctest',   fallback: ['doctest', 'doctest_dep'])
+freetype2_dep = dependency('freetype2', fallback: ['freetype2'])
+miniaudio_dep = dependency('miniaudio', fallback: ['miniaudio'])
+ogg_dep       = dependency('ogg',       fallback: ['ogg', 'libogg_dep'])
+vorbis_dep    = dependency('vorbis',    fallback: ['vorbis', 'vorbis_dep'])
+flac_dep      = dependency('flac',      fallback: ['flac', 'flac_dep'])
+sfml_dep      = dependency('sfml',      fallback: ['sfml', 'sfml_dep'])
+
+deps = [
+        doctest_dep,
+        freetype2_dep, 
+        miniaudio_dep,
+        ogg_dep,
+        vorbis_dep,
+        flac_dep,
+        sfml_dep
+    ]
 
 # Enforce C++23 support and GCC ≥ 15 for std::println.
 cc = meson.get_compiler('cpp')
