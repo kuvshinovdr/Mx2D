@@ -22,8 +22,8 @@
 
 Напрямую:
 
-- [DocTest](https://github.com/doctest/doctest), [лицензия MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
-- [SFML](https://github.com/SFML/SFML), [лицензия Zlib](https://github.com/SFML/SFML/blob/master/license.md);
+- [DocTest](https://github.com/doctest/doctest), лицензия [MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
+- [SFML](https://github.com/SFML/SFML), лицензия [Zlib](https://github.com/SFML/SFML/blob/master/license.md);
 
 Опосредованно через SFML (то, что пришлось прописать явно для Meson), в алфавитном порядке:
 
