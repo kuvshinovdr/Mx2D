@@ -48,3 +48,12 @@ Release/
 # Meson
 .wraplock
 
+# Downloaded dependencies
+subprojects/packagecache
+subprojects/flac-*
+subprojects/freetype-*
+subprojects/libogg-*
+subprojects/libpng-*
+subprojects/libvorbis-*
+subprojects/miniaudio-*
+subprojects/SFML-*

@@ -4,14 +4,47 @@
 ## Части
 
 1. Графика
+  - Предполагается использовать библиотеку [SFML](https://www.sfml-dev.org/) поверх OpenGL. [Обёртка для Meson](https://mesonbuild.com/Wrapdb-projects.html).
 2. Геометрия
+  - Базовые операции (точки-векторы-отображения, контуры).
+  - Вычисление геометрического центра, взвешенной суммы (центр составной фигуры).
+  - Описывающие фигуры (AABB, круг).
+  - Проверка наличия пересечения между фигурами, попадания точки в фигуру.
+  - Поиск точки/величины контакта.
 3. Механика
-  * Движение твёрдого тела под действием сил (без прямого учёта связей).
-  * Возможность задавать поля сил в областях.
-  * Учёт трения скольжения (и момента трения качения -- круги?).
-  * Удар с коэффициентом восстановления.
+  - Вычисление динамических характеристик тела (центр масс, масса, момент инерции).
+  - Движение твёрдого тела под действием сил (без прямого учёта связей).
+  - Возможность задавать поля сил в областях.
+  - Учёт трения скольжения (и момента трения качения — круги?).
+  - Удар с коэффициентом восстановления.
+
+### Зависимости
+
+Напрямую:
+
+- [DocTest](https://github.com/doctest/doctest), лицензия [MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
+- [SFML](https://github.com/SFML/SFML), лицензия [Zlib](https://github.com/SFML/SFML/blob/master/license.md);
+
+Опосредованно через SFML (то, что пришлось прописать явно для Meson или Meson добавил сам в subprojects), в алфавитном порядке:
+
+- [FLAC](https://github.com/xiph/flac), несколько лицензий на выбор, в частности, [BSD-3](https://github.com/xiph/flac/blob/master/COPYING.Xiph);
+- [FreeType2](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git), лицензия [FreeType Project](https://cgit.git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT);
+- [libpng](https://github.com/pnggroup/libpng), лицензия [PNG Reference Library License version 2](https://github.com/pnggroup/libpng/blob/libpng18/LICENSE.md);
+- [miniaudio](https://miniaud.io/), лицензия [MIT-0](https://github.com/aws/mit-0);
+- [OGG](https://github.com/xiph/ogg), лицензия [BSD-3](https://github.com/xiph/ogg/blob/main/COPYING);
+- [Vorbis](https://github.com/xiph/vorbis), лицензия [BSD-3](https://github.com/xiph/vorbis/blob/main/COPYING).
+
 
 ## Рассуждения
+
+### Геометрия
+
+Варианты:
+
+1. Заранее заготовленные примитивы (круг, квадрат, правильный треугольник, эллипс, прямоугольник, прямоугольный треугольник, произвольный треугольник, ...).
+2. Обобщённое представление геометрии (прямолинейные многоугольники, дуги эллипсов).
+3. Заранее заготовленные примитивы, включающие обобщённые представления.
+
 
 ### Пример "колесо"
 
@@ -121,3 +154,14 @@ w - R & = & Q\left(t_{0.5}, q_{0.5}, v_{0.5}\right),\\
 & -\dfrac{\partial A}{\partial t}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) - \dfrac{\partial A}{\partial q}\left(t_{0.5}, q_{0.5}, v_{0.5}\right) v_{0.5}.
 \end{array}\right.
 ```
+
+Если продифференцировать уравнения связей:
+
+```math
+\left\{\begin{array}{rclr}
+\mathbf M \ddot{\mathbf x} & = & \mathbf{F}(t, \mathbf x, \dot{\mathbf x}) + \mathbf{R}, & \mathbf x \in \mathbb R^n, \mathbf R \in \mathbb R^n,\\
+\mathbf A(t, \mathbf x, \dot{\mathbf x}) \ddot{\mathbf x} & = & \mathbf a(t, \mathbf x, \dot{\mathbf x}), & \mathbf A(t, \mathbf x, \dot{\mathbf x}) \in \mathbb R^{s \times n}.
+\end{array}\right.
+```
+
+Поскольку $s < n$, то система с $2n$ уравнений недоопределена.
