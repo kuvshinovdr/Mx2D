@@ -12,12 +12,13 @@ TEST_SUITE("Eigen")
         auto v1 { Vector2d(1, -1.5) };
         auto v2 { Vector2d(2,  0.5) };
 
-        auto vs { v1 + v2 };
+        auto vs { v1 + 2.0 * v2 };
         
-        CHECK(vs[0] ==  3.0);
-        CHECK(vs[1] == -1.0);
+        CHECK(vs[0] ==  5.0);
+        CHECK(vs[1] == -0.5);
 
-        CHECK(v1.dot(v2) == 1.25);
+        CHECK(v1.dot(v2)   == 1.25);
+        CHECK(v1.cross(v2) == 3.5);
     }
 
 }

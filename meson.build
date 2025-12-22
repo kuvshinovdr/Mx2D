@@ -26,7 +26,7 @@ deps = [
         vorbis_dep,
         flac_dep,
         sfml_dep,
-		eigen_dep		
+        eigen_dep		
     ]
 
 # Enforce C++23 support and GCC ≥ 15 for std::println.
