@@ -6,6 +6,7 @@
 1. Графика
   - Предполагается использовать библиотеку [SFML](https://www.sfml-dev.org/) поверх OpenGL. [Обёртка для Meson](https://mesonbuild.com/Wrapdb-projects.html).
 2. Геометрия
+  - Векторно-матричные операции — библиотека Eigen.
   - Базовые операции (точки-векторы-отображения, контуры).
   - Вычисление геометрического центра, взвешенной суммы (центр составной фигуры).
   - Описывающие фигуры (AABB, круг).
@@ -23,7 +24,8 @@
 Напрямую:
 
 - [DocTest](https://github.com/doctest/doctest), лицензия [MIT](https://github.com/doctest/doctest/blob/master/LICENSE.txt);
-- [SFML](https://github.com/SFML/SFML), лицензия [Zlib](https://github.com/SFML/SFML/blob/master/license.md);
+- [Eigen](https://libeigen.gitlab.io/), лицензия [MPL2](https://libeigen.gitlab.io/#license);
+- [SFML](https://github.com/SFML/SFML), лицензия [Zlib](https://github.com/SFML/SFML/blob/master/license.md).
 
 Опосредованно через SFML (то, что пришлось прописать явно для Meson или Meson добавил сам в subprojects), в алфавитном порядке:
 

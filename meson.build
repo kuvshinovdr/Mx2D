@@ -16,6 +16,7 @@ ogg_dep       = dependency('ogg',       fallback: ['ogg', 'libogg_dep'])
 vorbis_dep    = dependency('vorbis',    fallback: ['vorbis', 'vorbis_dep'])
 flac_dep      = dependency('flac',      fallback: ['flac', 'flac_dep'])
 sfml_dep      = dependency('sfml',      fallback: ['sfml', 'sfml_dep'])
+eigen_dep     = dependency('eigen3',	fallback: ['eigen3'])
 
 deps = [
         doctest_dep,
@@ -24,7 +25,8 @@ deps = [
         ogg_dep,
         vorbis_dep,
         flac_dep,
-        sfml_dep
+        sfml_dep,
+		eigen_dep		
     ]
 
 # Enforce C++23 support and GCC ≥ 15 for std::println.

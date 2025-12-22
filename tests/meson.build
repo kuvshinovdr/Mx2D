@@ -1,5 +1,7 @@
 # Test sources
-tests = []
+tests = [
+	'test_eigen.cpp',
+	]
 
 test_sources = files(tests)
 

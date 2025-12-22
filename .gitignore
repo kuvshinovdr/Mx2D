@@ -50,6 +50,7 @@ Release/
 
 # Downloaded dependencies
 subprojects/packagecache
+subprojects/eigen-*
 subprojects/flac-*
 subprojects/freetype-*
 subprojects/libogg-*
