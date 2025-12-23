@@ -4,6 +4,7 @@
 
 using namespace Eigen;
 
+// Проверяем, что Eigen доступен и работает.
 TEST_SUITE("Eigen")
 {
 
