@@ -1,5 +1,6 @@
 # Test sources
 tests = [
+	'test_body_id.cpp',
 	'test_eigen.cpp',
 	]
 

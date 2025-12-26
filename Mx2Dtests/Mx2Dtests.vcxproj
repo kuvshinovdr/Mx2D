@@ -131,8 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\tests\test_body_id.cpp" />
     <ClCompile Include="..\tests\test_eigen.cpp" />
     <ClCompile Include="..\tests\test_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\body_id.hpp" />
+    <ClInclude Include="..\src\world.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
