@@ -1,7 +1,9 @@
 # Test sources
 tests = [
 	'test_body_id.cpp',
+	'test_data_storage.cpp',
 	'test_eigen.cpp',
+	'test_world.cpp',
 	]
 
 test_sources = files(tests)

@@ -37,6 +37,7 @@ namespace mx2d
         return static_cast<std::make_unsigned_t<decltype(n)>>(n);
     }
 
+    /// @brief Идентификатор физического тела: индекс и тип.
     class BodyId
     {
     public:
@@ -48,12 +49,14 @@ namespace mx2d
             // Пусто.
         }
 
+        /// @brief Извлечь индекс тела в массиве атрибутов для тел данного типа. 
         [[nodiscard]] constexpr auto index() const noexcept
             -> Index
         {
             return static_cast<Index>(_value & BodyIndexMax);
         }
 
+        /// @brief Извлечь тип тела. 
         [[nodiscard]] constexpr auto type() const noexcept
             -> BodyType
         {

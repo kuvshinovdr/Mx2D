@@ -132,11 +132,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\tests\test_body_id.cpp" />
+    <ClCompile Include="..\tests\test_data_storage.cpp" />
     <ClCompile Include="..\tests\test_eigen.cpp" />
     <ClCompile Include="..\tests\test_main.cpp" />
+    <ClCompile Include="..\tests\test_world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\body_id.hpp" />
+    <ClInclude Include="..\src\box.hpp" />
+    <ClInclude Include="..\src\circle.hpp" />
+    <ClInclude Include="..\src\convex_polygon.hpp" />
+    <ClInclude Include="..\src\data_storage.hpp" />
+    <ClInclude Include="..\src\lozenge.hpp" />
     <ClInclude Include="..\src\world.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
