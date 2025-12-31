@@ -19,6 +19,7 @@ TEST_SUITE("DataStorage")
 
         CHECK(stor.size() == 3);
         CHECK(stor[1] == 0.5f);
+        CHECK(stor[BodyId(2, BodyType::Box)] == 10.f);
         CHECK(stor.data() == stor.view().data());
         CHECK(std::ranges::equal(stor.view(), std::initializer_list{1.f, 0.5f, 10.f}));
         stor.pop_back();
@@ -35,6 +36,13 @@ TEST_SUITE("DataStorage")
         CHECK(stor.size() == 0);
         CHECK(stor.empty());
         CHECK(std::ranges::equal(stor.view(), std::initializer_list<float>{}));
+
+        stor.push_back(1.f);
+        stor.push_back(2.f);
+        stor.push_back(3.f);
+        stor.push_back(4.f);
+        stor.erase(1);
+        CHECK(std::ranges::equal(stor.view(), std::initializer_list{1.f, 4.f, 3.f}));
     }
 
 }
